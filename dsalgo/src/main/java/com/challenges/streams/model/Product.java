@@ -7,17 +7,25 @@ public class Product {
     private int id;
     private String name;
     private BigDecimal price;
-    private List<Category> categories;
+    // private List<Category> categories;
+    private Category category;
 
     public Product() {
         // No-argument constructor
     }
 
-    public Product(int id, String name, BigDecimal price, List<Category> categories) {
+    // public Product(int id, String name, BigDecimal price, List<Category> categories) {
+    //     this.id = id;
+    //     this.name = name;
+    //     this.price = price;
+    //     this.categories = categories;
+    // }
+
+    public Product(int id, String name, BigDecimal price, Category category) {
         this.id = id;
         this.name = name;
         this.price = price;
-        this.categories = categories;
+        this.category = category;
     }
 
     // Getter and setter methods for id
@@ -47,12 +55,21 @@ public class Product {
         this.price = price;
     }
 
-    // Getter and setter methods for categories
-    public List<Category> getCategories() {
-        return categories;
+    // // Getter and setter methods for categories
+    // public List<Category> getCategories() {
+    //     return categories;
+    // }
+
+    // public void setCategories(List<Category> categories) {
+    //     this.categories = categories;
+    // }
+
+    // Getter and setter methods for category
+    public Category getCategory() {
+        return category;
     }
 
-    public void setCategories(List<Category> categories) {
-        this.categories = categories;
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }
